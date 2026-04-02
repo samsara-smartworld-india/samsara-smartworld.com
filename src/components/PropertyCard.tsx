@@ -15,9 +15,9 @@ interface PropertyCardProps {
 export default function PropertyCard({ title, location, area, rent, highlights, href, badge, image, imageAlt }: PropertyCardProps) {
   return (
     <article className="rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition overflow-hidden flex flex-col">
-      <div className="relative h-52 bg-gradient-to-br from-blue-100 to-blue-50">
+      <div className="relative h-80 bg-gradient-to-br from-blue-50 to-gray-100">
         {image ? (
-          <img src={image} alt={imageAlt || title} className="w-full h-full object-cover" loading="lazy" />
+          <img src={image} alt={imageAlt || title} className="w-full h-full object-contain" loading="lazy" />
         ) : (
           <div className="w-full h-full flex items-center justify-center">
             <span className="text-blue-300 text-sm">Property Image</span>
