@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Samsara Smartworld — Property Leasing Website
 
-## Getting Started
+Premium commercial office spaces for lease in Delhi and Gurugram by **Millennium Maritech Private Limited**.
 
-First, run the development server:
+## Properties
+
+1. **Le Meridien Commercial Tower, New Delhi** — 7th Floor, Raisina Road, ~1,140 sq. ft. furnished office
+2. **Plot 87, Sector 44, Gurugram** — Standalone building, ~25,000 sq. ft., coworking available
+
+## Tech Stack
+
+- **Framework:** Next.js (App Router) with TypeScript
+- **Styling:** Tailwind CSS
+- **Deployment:** GitHub Pages (static export)
+- **Contact Form:** Formspree
+
+## Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # Development server
+npm run build   # Static export to /out
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The site auto-deploys via GitHub Actions on push to `main`. The workflow builds the Next.js static export and deploys to GitHub Pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### DNS Configuration
 
-## Learn More
+Add these records at your domain registrar for `samsara-smartworld.com`:
 
-To learn more about Next.js, take a look at the following resources:
+| Type  | Host | Value                              |
+|-------|------|------------------------------------|
+| A     | @    | 185.199.108.153                    |
+| A     | @    | 185.199.109.153                    |
+| A     | @    | 185.199.110.153                    |
+| A     | @    | 185.199.111.153                    |
+| CNAME | www  | samsara-smartworld-india.github.io |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### GitHub Pages Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Go to **Settings > Pages** in the repository
+2. Set Source to **GitHub Actions**
+3. Add custom domain: `samsara-smartworld.com`
+4. Enable **Enforce HTTPS** after DNS propagation
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+├── .github/workflows/deploy.yml   # GitHub Actions deployment
+├── public/
+│   ├── CNAME                      # Custom domain
+│   ├── sitemap.xml                # SEO sitemap
+│   └── robots.txt                 # Search engine directives
+├── src/
+│   ├── app/                       # Next.js pages
+│   ├── components/                # Reusable components
+│   └── lib/                       # Schema markup utilities
+├── emails/                        # Email campaign templates
+├── marketing/                     # Classifieds, ads, WhatsApp templates
+└── next.config.js                 # Static export configuration
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact
+
+- **Abhinav Jha** — 8130292965
+- **Email:** info@samsara-smartworld.com
+- **Website:** [samsara-smartworld.com](https://samsara-smartworld.com)

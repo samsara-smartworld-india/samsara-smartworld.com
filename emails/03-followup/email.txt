@@ -1,0 +1,35 @@
+Subject: Following up — {{PropertyName}} office space
+
+Dear {{FirstName}},
+
+I recently reached out regarding an office space at {{PropertyName}} and wanted to follow up in case my earlier message was missed.
+
+A quick recap of the space:
+
+  Property:  {{PropertyName}}
+  Location:  {{PropertyLocation}}
+  Area:      {{PropertyArea}}
+  Rate:      {{PropertyRate}}
+
+We have had strong interest in this property, and I would love to arrange a visit before availability changes. If the timing is not right, I am also happy to keep you informed about future listings that match your requirements.
+
+Would any of the following work for a quick call or site visit?
+
+  - {{TimeSlot1}}
+  - {{TimeSlot2}}
+  - {{TimeSlot3}}
+
+Please reply to this email or call me directly at your convenience.
+
+---
+
+Abhinav Jha
+Millennium Maritech Private Limited
+Phone: +91 8130292965
+Email: info@samsara-smartworld.com
+Web:   https://samsara-smartworld.com
+
+---
+You are receiving this email because we previously contacted you about this property.
+To unsubscribe, visit: {{UnsubscribeURL}}
+Email preferences: {{PreferencesURL}}
