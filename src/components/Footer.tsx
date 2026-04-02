@@ -9,9 +9,9 @@ export default function Footer() {
           <div>
             <div className="mb-3">
               <img
-                src="/images/logo.png"
+                src="/images/logo-white.png"
                 alt="Samsara Smart World"
-                className="h-10 w-auto brightness-0 invert"
+                className="h-10 w-auto"
               />
             </div>
             <p className="text-sm leading-relaxed">
