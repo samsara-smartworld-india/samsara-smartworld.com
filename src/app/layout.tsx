@@ -48,6 +48,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          src="https://www.google.com/recaptcha/api.js?render=6LeEI6MsAAAAACDwhaDcYkVcex25DzIMGJKnsDdu"
+          async
+          defer
+        />
+      </head>
       <body className={`${inter.className} antialiased text-gray-900 bg-white min-h-screen flex flex-col`}>
         <SchemaMarkup data={getRealEstateAgentSchema()} />
         <Header />

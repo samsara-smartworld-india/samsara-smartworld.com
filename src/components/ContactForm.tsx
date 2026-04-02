@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
+import PhoneInput from './PhoneInput';
+import { getRecaptchaToken } from '@/lib/recaptcha';
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -13,6 +15,10 @@ export default function ContactForm() {
     const data = new FormData(form);
 
     try {
+      // Get reCAPTCHA token
+      const token = await getRecaptchaToken('contact_form');
+      data.append('g-recaptcha-response', token);
+
       await fetch('https://formspree.io/f/mwvwnppl', {
         method: 'POST',
         body: data,
@@ -55,10 +61,7 @@ export default function ContactForm() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
-          <input type="tel" id="phone" name="phone" required className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none" />
-        </div>
+        <PhoneInput id="phone" name="phone" />
         <div>
           <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
           <input type="text" id="company" name="company" className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none" />
@@ -71,6 +74,7 @@ export default function ContactForm() {
           <option value="">Select a property</option>
           <option value="Le Meridien, Delhi">Le Meridien Commercial Tower, Delhi</option>
           <option value="Plot 87, Gurugram">Plot 87, Sector 44, Gurugram</option>
+          <option value="Coworking, Gurugram">Coworking Space, Gurugram</option>
           <option value="Both Properties">Both Properties</option>
         </select>
       </div>
@@ -79,6 +83,12 @@ export default function ContactForm() {
         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
         <textarea id="message" name="message" rows={4} className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none resize-y" />
       </div>
+
+      <p className="text-xs text-gray-400">
+        This site is protected by reCAPTCHA and the Google{' '}
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy Policy</a> and{' '}
+        <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms of Service</a> apply.
+      </p>
 
       <button
         type="submit"

@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect, useRef, type FormEvent } from 'react';
+import PhoneInput from './PhoneInput';
+import { getRecaptchaToken } from '@/lib/recaptcha';
 
 interface CoworkingBookingFormProps {
   defaultResource?: string;
@@ -39,6 +41,10 @@ export default function CoworkingBookingForm({ defaultResource }: CoworkingBooki
     const data = new FormData(form);
 
     try {
+      // Get reCAPTCHA token
+      const token = await getRecaptchaToken('booking_form');
+      data.append('g-recaptcha-response', token);
+
       await fetch('https://formspree.io/f/mwvwnppl', {
         method: 'POST',
         body: data,
@@ -189,10 +195,7 @@ export default function CoworkingBookingForm({ defaultResource }: CoworkingBooki
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          <div>
-            <label htmlFor="booking_phone" className="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
-            <input type="tel" id="booking_phone" name="phone" required className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none" />
-          </div>
+          <PhoneInput id="booking_phone" name="phone" />
           <div>
             <label htmlFor="booking_company" className="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
             <input type="text" id="booking_company" name="company" className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none" />
@@ -216,6 +219,12 @@ export default function CoworkingBookingForm({ defaultResource }: CoworkingBooki
             <strong>Note:</strong> Submitting this form sends a booking request. Your booking will be confirmed by our team within 24 hours after checking availability. You will receive confirmation via email or phone.
           </p>
         </div>
+
+        <p className="text-xs text-gray-400">
+          This site is protected by reCAPTCHA and the Google{' '}
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy Policy</a> and{' '}
+          <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms of Service</a> apply.
+        </p>
 
         <button
           type="submit"
