@@ -8,14 +8,21 @@ interface PropertyCardProps {
   highlights: string[];
   href: string;
   badge?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
-export default function PropertyCard({ title, location, area, rent, highlights, href, badge }: PropertyCardProps) {
+export default function PropertyCard({ title, location, area, rent, highlights, href, badge, image, imageAlt }: PropertyCardProps) {
   return (
     <article className="rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition overflow-hidden flex flex-col">
-      {/* Placeholder image area */}
-      <div className="relative h-52 bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center">
-        <span className="text-blue-300 text-sm">Property Image</span>
+      <div className="relative h-52 bg-gradient-to-br from-blue-100 to-blue-50">
+        {image ? (
+          <img src={image} alt={imageAlt || title} className="w-full h-full object-cover" loading="lazy" />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <span className="text-blue-300 text-sm">Property Image</span>
+          </div>
+        )}
         {badge && (
           <span className="absolute top-3 left-3 bg-blue-700 text-white text-xs font-semibold px-2.5 py-1 rounded">
             {badge}

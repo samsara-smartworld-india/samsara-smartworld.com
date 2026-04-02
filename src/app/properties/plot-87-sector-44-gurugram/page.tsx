@@ -110,16 +110,51 @@ export default function Plot87Page() {
         </div>
       </section>
 
-      {/* Gallery placeholder */}
+      {/* Photo Gallery */}
       <section className="py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl font-bold text-gray-900 mb-6">Photo Gallery</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Building Exterior', 'Double-Height Floor', 'Coworking Space', 'Private Cabin', 'Podcast Studio', 'Meeting Room', 'Lobby & Elevators', 'Parking Area'].map((label) => (
-              <div key={label} className="aspect-[4/3] rounded-lg bg-gradient-to-br from-gray-100 to-gray-50 flex items-center justify-center border border-gray-200">
-                <span className="text-xs text-gray-400">{label}</span>
+            {[
+              { src: '/images/plot-87-gurugram/exterior-render.png', alt: 'Plot 87 Sector 44 Gurugram building exterior render with stone facade' },
+              { src: '/images/plot-87-gurugram/exterior-front.jpg', alt: 'Plot 87 standalone commercial building front view in Sector 44, Gurugram' },
+              { src: '/images/plot-87-gurugram/exterior-angle.jpg', alt: 'Plot 87 building exterior angle view showing full facade and entrance' },
+              { src: '/images/plot-87-gurugram/lobby-entrance.jpg', alt: 'Ground floor lobby with marble flooring and glass entrance at Plot 87' },
+              { src: '/images/plot-87-gurugram/double-height-finished.png', alt: 'Double-height first floor with 20-foot ceilings at Plot 87 Sector 44' },
+              { src: '/images/plot-87-gurugram/fourth-floor.png', alt: 'Fourth floor open office space with natural light at Plot 87 Gurugram' },
+              { src: '/images/plot-87-gurugram/coworking.png', alt: 'Grade A+ coworking space on 3rd floor — desks, cabins, podcast studio at Plot 87' },
+              { src: '/images/plot-87-gurugram/office-space.jpg', alt: 'Furnished office space with wooden flooring on upper floor at Plot 87' },
+              { src: '/images/plot-87-gurugram/upper-floor.jpg', alt: 'Open floor plate with polished flooring at Plot 87 Sector 44' },
+              { src: '/images/plot-87-gurugram/double-height-raw.jpg', alt: 'Double-height raw space showing 20-foot ceiling height at Plot 87' },
+              { src: '/images/plot-87-gurugram/terrace.jpg', alt: 'Terrace area with fire safety equipment at Plot 87 Sector 44 Gurugram' },
+            ].map((img) => (
+              <div key={img.src} className="aspect-[4/3] rounded-lg overflow-hidden border border-gray-200">
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
               </div>
             ))}
+          </div>
+
+          {/* Floor Plans */}
+          <h3 className="text-lg font-bold text-gray-900 mt-10 mb-4">Floor Plans</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
+            <div>
+              <img
+                src="/images/plot-87-gurugram/floor-plan-1st.jpg"
+                alt="First floor plan of Plot 87 Sector 44 Gurugram showing 5,300 sq. ft. layout"
+                className="w-full rounded-lg border border-gray-200"
+                loading="lazy"
+              />
+              <p className="text-xs text-gray-500 mt-2 text-center">First Floor Plan</p>
+            </div>
+            <div>
+              <img
+                src="/images/plot-87-gurugram/floor-plan-4th.png"
+                alt="Fourth floor plan of Plot 87 Sector 44 Gurugram showing 5,300 sq. ft. layout with balcony"
+                className="w-full rounded-lg border border-gray-200"
+                loading="lazy"
+              />
+              <p className="text-xs text-gray-500 mt-2 text-center">Fourth Floor Plan</p>
+            </div>
           </div>
         </div>
       </section>
@@ -231,7 +266,7 @@ export default function Plot87Page() {
           <h2 className="text-xl font-bold text-gray-900 mb-6">Location</h2>
           <div className="rounded-lg overflow-hidden border border-gray-200">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.5!2d77.035!3d28.449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18ee82ebd3c3%3A0x6dab46bc68e5e32f!2sSector%2044%2C%20Gurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1700000000000"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d877.0!2d77.0724!3d28.4502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDI3JzAwLjciTiA3N8KwMDQnMjAuNiJF!5e0!3m2!1sen!2sin!4v1700000000000"
               width="100%"
               height="400"
               style={{ border: 0 }}

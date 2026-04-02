@@ -36,6 +36,8 @@ export default function Home() {
               area="~1,140 sq. ft."
               rent="₹400/sq. ft./mo"
               badge="Furnished"
+              image="/images/le-meridien/exterior.png"
+              imageAlt="Le Meridien Commercial Tower exterior on Raisina Road, New Delhi"
               highlights={[
                 'Fully furnished, plug-and-play office',
                 '7th floor with Lutyens\' Delhi views',
@@ -51,6 +53,8 @@ export default function Home() {
               area="~25,000 sq. ft."
               rent="From ₹50/sq. ft."
               badge="Standalone Building"
+              image="/images/plot-87-gurugram/exterior-render.png"
+              imageAlt="Plot 87 standalone commercial building in Sector 44, Gurugram"
               highlights={[
                 '5 floors, ~5,300 sq. ft. per floor',
                 '20-ft double-height 1st & 2nd floor',

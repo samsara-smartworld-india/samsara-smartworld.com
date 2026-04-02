@@ -105,16 +105,36 @@ export default function LeMeridienPage() {
         </div>
       </section>
 
-      {/* Gallery placeholder */}
+      {/* Photo Gallery */}
       <section className="py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl font-bold text-gray-900 mb-6">Photo Gallery</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Exterior', 'Reception', 'Executive Cabin', 'Conference Room', 'Kitchen', 'Skyline View', 'Corridor', 'Lobby'].map((label) => (
-              <div key={label} className="aspect-[4/3] rounded-lg bg-gradient-to-br from-gray-100 to-gray-50 flex items-center justify-center border border-gray-200">
-                <span className="text-xs text-gray-400">{label}</span>
+            {[
+              { src: '/images/le-meridien/exterior.png', alt: 'Le Meridien Commercial Tower exterior with Le Meridien signage on Raisina Road, New Delhi' },
+              { src: '/images/le-meridien/building-exterior.jpg', alt: 'Le Meridien Commercial Tower building view from street level' },
+              { src: '/images/le-meridien/executive-cabin.jpg', alt: 'Furnished executive cabin with glass partition at Le Meridien 7th floor office' },
+              { src: '/images/le-meridien/conference-room.jpg', alt: 'Conference room with iMac and seating at Le Meridien office space' },
+              { src: '/images/le-meridien/workstation.jpg', alt: 'Glass-partitioned workstation area at Le Meridien Commercial Tower office' },
+              { src: '/images/le-meridien/kitchen.jpg', alt: 'Fitted kitchen and pantry area at Le Meridien 7th floor office' },
+              { src: '/images/le-meridien/cabin-with-view.jpg', alt: 'Executive cabin with panoramic Lutyens Delhi skyline view from 7th floor' },
+              { src: '/images/le-meridien/sunset-view.jpg', alt: 'Sunset view over Lutyens Delhi from Le Meridien Commercial Tower 7th floor' },
+            ].map((img) => (
+              <div key={img.src} className="aspect-[4/3] rounded-lg overflow-hidden border border-gray-200">
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
               </div>
             ))}
+          </div>
+
+          {/* Floor Plan */}
+          <h3 className="text-lg font-bold text-gray-900 mt-10 mb-4">Floor Plan</h3>
+          <div className="max-w-lg">
+            <img
+              src="/images/le-meridien/floor-plan.png"
+              alt="Le Meridien 7th floor office floor plan showing reception, executive cabins, conference room, kitchen, and server room — total area 1,100 sq. ft."
+              className="w-full rounded-lg border border-gray-200"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
@@ -189,7 +209,7 @@ export default function LeMeridienPage() {
           <h2 className="text-xl font-bold text-gray-900 mb-6">Location</h2>
           <div className="rounded-lg overflow-hidden border border-gray-200">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.8!2d77.2095!3d28.6129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2a99d07c56d%3A0xdb60e74e9e2d44ee!2sLe%20Meridien%20New%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1751.3!2d77.21!3d28.613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2dbc1d13f3b%3A0x8a59b0d3c7f76e9b!2sLe%20Meridien%20New%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000"
               width="100%"
               height="400"
               style={{ border: 0 }}
