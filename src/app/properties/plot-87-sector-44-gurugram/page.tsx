@@ -155,7 +155,7 @@ export default function Plot87Page() {
           <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 md:p-10 border border-indigo-100">
             <h2 className="text-xl font-bold text-gray-900 mb-4">3rd Floor — Grade A+ Coworking Space</h2>
             <p className="text-sm text-gray-700 mb-6 max-w-2xl">
-              An operational, ready-to-use coworking floor with premium amenities for freelancers, small teams, and creators.
+              An operational, ready-to-use coworking floor with premium amenities for freelancers, small teams, and creators. Book desks, the conference room, or the podcast studio.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm">
               {[
@@ -176,6 +176,17 @@ export default function Plot87Page() {
                   <span className="text-gray-700">{item}</span>
                 </div>
               ))}
+            </div>
+            <div className="mt-8">
+              <Link
+                href="/coworking/"
+                className="inline-flex items-center gap-2 rounded-md bg-indigo-700 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-800 transition"
+              >
+                Book a Desk, Conference Room, or Studio
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </Link>
             </div>
           </div>
         </div>

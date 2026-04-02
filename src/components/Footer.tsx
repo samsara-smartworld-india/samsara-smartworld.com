@@ -29,6 +29,11 @@ export default function Footer() {
                   Plot 87, Sector 44, Gurugram
                 </Link>
               </li>
+              <li>
+                <Link href="/coworking/" className="hover:text-white transition">
+                  Coworking Space, Gurugram
+                </Link>
+              </li>
             </ul>
           </div>
 

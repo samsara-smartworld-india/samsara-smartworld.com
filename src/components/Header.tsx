@@ -25,6 +25,9 @@ export default function Header() {
             <Link href="/properties/plot-87-sector-44-gurugram/" className="text-sm font-medium text-gray-700 hover:text-blue-700 transition">
               Plot 87, Gurugram
             </Link>
+            <Link href="/coworking/" className="text-sm font-medium text-gray-700 hover:text-blue-700 transition">
+              Coworking
+            </Link>
             <Link href="/about/" className="text-sm font-medium text-gray-700 hover:text-blue-700 transition">
               About
             </Link>
@@ -64,6 +67,9 @@ export default function Header() {
             </Link>
             <Link href="/properties/plot-87-sector-44-gurugram/" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded" onClick={() => setOpen(false)}>
               Plot 87, Gurugram
+            </Link>
+            <Link href="/coworking/" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded" onClick={() => setOpen(false)}>
+              Coworking
             </Link>
             <Link href="/about/" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded" onClick={() => setOpen(false)}>
               About
