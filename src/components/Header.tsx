@@ -10,8 +10,12 @@ export default function Header() {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-gray-900 tracking-tight">
-            Samsara <span className="text-blue-700">Smartworld</span>
+          <Link href="/" className="flex items-center gap-1">
+            <img
+              src="/images/logo.png"
+              alt="Samsara Smart World"
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop nav */}

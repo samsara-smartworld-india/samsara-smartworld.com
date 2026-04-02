@@ -33,6 +33,18 @@ export const metadata: Metadata = {
     title: 'Samsara Smartworld — Premium Commercial Spaces in Delhi & Gurugram',
     description:
       'Lease premium furnished office spaces in Central Delhi and Gurugram by Millennium Maritech Private Limited.',
+    images: [
+      {
+        url: 'https://samsara-smartworld.com/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Samsara Smart World — Premium Commercial Spaces',
+      },
+    ],
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
   twitter: {
     card: 'summary_large_image',

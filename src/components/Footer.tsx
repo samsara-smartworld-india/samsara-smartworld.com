@@ -7,9 +7,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-lg font-bold text-white mb-3">
-              Samsara <span className="text-blue-400">Smartworld</span>
-            </h3>
+            <div className="mb-3">
+              <img
+                src="/images/logo.png"
+                alt="Samsara Smart World"
+                className="h-10 w-auto brightness-0 invert"
+              />
+            </div>
             <p className="text-sm leading-relaxed">
               Premium commercial office spaces for lease in Delhi and Gurugram by Millennium Maritech Private Limited.
             </p>
