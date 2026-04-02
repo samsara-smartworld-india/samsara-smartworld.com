@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 import FAQSection from '@/components/FAQSection';
+import ImageGallery from '@/components/ImageGallery';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import { getPlot87OfferSchema, getPlot87FAQSchema } from '@/lib/schema';
 
@@ -110,25 +111,15 @@ export default function Plot87Page() {
         </div>
       </section>
 
-      {/* Photo Gallery */}
-      <section className="py-8">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Photo Gallery</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[
-              { src: '/images/plot-87-gurugram/exterior-render.png', alt: 'Plot 87 Sector 44 Gurugram standalone institutional building exterior render with stone facade' },
-              { src: '/images/plot-87-gurugram/double-height.png', alt: 'Double-height first and second floor with 20-foot ceilings at Plot 87 Sector 44 Gurugram' },
-              { src: '/images/plot-87-gurugram/fourth-floor.png', alt: 'Fourth floor open office space with natural light and wooden door frames at Plot 87 Gurugram' },
-              { src: '/images/plot-87-gurugram/coworking.png', alt: 'Grade A+ coworking space on 3rd floor — dedicated desks, private cabins, podcast studio at Plot 87' },
-              { src: '/images/plot-87-gurugram/floor-plan-4th.png', alt: 'Fourth floor architectural plan of Plot 87 Sector 44 Gurugram showing 5,300 sq. ft. layout with balcony' },
-            ].map((img) => (
-              <div key={img.src} className="aspect-[4/3] rounded-lg overflow-hidden border border-gray-200">
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ImageGallery
+        images={[
+          { src: '/images/plot-87-gurugram/exterior-render.png', alt: 'Plot 87 Sector 44 Gurugram standalone institutional building exterior render with stone facade', label: 'Building Exterior' },
+          { src: '/images/plot-87-gurugram/double-height.png', alt: 'Double-height first and second floor with 20-foot ceilings at Plot 87 Sector 44 Gurugram', label: '1st–2nd Floor — 20 ft Double Height' },
+          { src: '/images/plot-87-gurugram/fourth-floor.png', alt: 'Fourth floor open office space with natural light and wooden door frames at Plot 87 Gurugram', label: '4th Floor Office Space' },
+          { src: '/images/plot-87-gurugram/coworking.png', alt: 'Grade A+ coworking space on 3rd floor — dedicated desks, private cabins, podcast studio at Plot 87', label: '3rd Floor — Coworking Space' },
+          { src: '/images/plot-87-gurugram/floor-plan-4th.png', alt: 'Fourth floor architectural plan of Plot 87 Sector 44 Gurugram showing 5,300 sq. ft. layout with balcony', label: 'Floor Plan — 4th Floor' },
+        ]}
+      />
 
       {/* Floor-by-Floor Breakdown */}
       <section className="py-12 bg-gray-50">

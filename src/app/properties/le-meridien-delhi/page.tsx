@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 import FAQSection from '@/components/FAQSection';
+import ImageGallery from '@/components/ImageGallery';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import { getLeMeridienOfferSchema, getLeMeridienFAQSchema } from '@/lib/schema';
 
@@ -105,26 +106,16 @@ export default function LeMeridienPage() {
         </div>
       </section>
 
-      {/* Photo Gallery */}
-      <section className="py-8">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Photo Gallery</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[
-              { src: '/images/le-meridien/exterior.png', alt: 'Le Meridien Commercial Tower exterior with Le Meridien signage on Raisina Road, New Delhi' },
-              { src: '/images/le-meridien/executive-cabin.png', alt: 'Furnished executive cabin with glass partitions and LED lighting at Le Meridien 7th floor office' },
-              { src: '/images/le-meridien/conference-room.png', alt: 'Conference room with leather seating and wall-mounted display at Le Meridien office space' },
-              { src: '/images/le-meridien/cabin-with-view.png', alt: 'Executive cabin with panoramic window overlooking Lutyens Delhi and Rashtrapati Bhavan from 7th floor' },
-              { src: '/images/le-meridien/kitchen.png', alt: 'Fitted L-shaped kitchen and pantry area with modern cabinetry at Le Meridien 7th floor office' },
-              { src: '/images/le-meridien/skyline-view.png', alt: 'Sunset skyline view over Lutyens Delhi with Rashtrapati Bhavan visible from Le Meridien 7th floor cabin' },
-            ].map((img) => (
-              <div key={img.src} className="aspect-[4/3] rounded-lg overflow-hidden border border-gray-200">
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ImageGallery
+        images={[
+          { src: '/images/le-meridien/exterior.png', alt: 'Le Meridien Commercial Tower exterior with Le Meridien signage on Raisina Road, New Delhi', label: 'Building Exterior' },
+          { src: '/images/le-meridien/executive-cabin.png', alt: 'Furnished executive cabin with glass partitions and LED lighting at Le Meridien 7th floor office', label: 'Executive Cabin' },
+          { src: '/images/le-meridien/conference-room.png', alt: 'Conference room with leather seating and wall-mounted display at Le Meridien office space', label: 'Conference Room' },
+          { src: '/images/le-meridien/cabin-with-view.png', alt: 'Executive cabin with panoramic window overlooking Lutyens Delhi and Rashtrapati Bhavan from 7th floor', label: 'Cabin — Rashtrapati Bhavan View' },
+          { src: '/images/le-meridien/kitchen.png', alt: 'Fitted L-shaped kitchen and pantry area with modern cabinetry at Le Meridien 7th floor office', label: 'Kitchen & Pantry' },
+          { src: '/images/le-meridien/skyline-view.png', alt: 'Sunset skyline view over Lutyens Delhi with Rashtrapati Bhavan visible from Le Meridien 7th floor cabin', label: 'Sunset Skyline View' },
+        ]}
+      />
 
       {/* Highlights */}
       <section className="py-12 bg-gray-50">
