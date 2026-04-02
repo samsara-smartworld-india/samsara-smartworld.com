@@ -66,7 +66,7 @@ export default function ContactPage() {
                   </p>
                   <div className="rounded-lg overflow-hidden border border-gray-200">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1751.3!2d77.21!3d28.613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2dbc1d13f3b%3A0x8a59b0d3c7f76e9b!2sLe%20Meridien%20New%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000"
+                      src="https://www.google.com/maps?q=28.618719191981846,77.21737578174783&z=17&output=embed"
                       width="100%"
                       height="200"
                       style={{ border: 0 }}
@@ -86,7 +86,7 @@ export default function ContactPage() {
                   </p>
                   <div className="rounded-lg overflow-hidden border border-gray-200">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d877.0!2d77.0724!3d28.4502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDI3JzAwLjciTiA3N8KwMDQnMjAuNiJF!5e0!3m2!1sen!2sin!4v1700000000000"
+                      src="https://www.google.com/maps?q=28.451194,77.070867&z=17&output=embed"
                       width="100%"
                       height="200"
                       style={{ border: 0 }}

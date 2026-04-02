@@ -52,8 +52,8 @@ export function getLeMeridienOfferSchema() {
       name: 'New Delhi, India',
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: 28.6129,
-        longitude: 77.2115,
+        latitude: 28.618719,
+        longitude: 77.217376,
       },
     },
     seller: {
@@ -85,8 +85,8 @@ export function getPlot87OfferSchema() {
       name: 'Gurugram, Haryana, India',
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: 28.4489,
-        longitude: 77.0380,
+        latitude: 28.451194,
+        longitude: 77.070867,
       },
     },
     seller: {

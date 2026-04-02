@@ -266,7 +266,7 @@ export default function Plot87Page() {
           <h2 className="text-xl font-bold text-gray-900 mb-6">Location</h2>
           <div className="rounded-lg overflow-hidden border border-gray-200">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d877.0!2d77.0724!3d28.4502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDI3JzAwLjciTiA3N8KwMDQnMjAuNiJF!5e0!3m2!1sen!2sin!4v1700000000000"
+              src="https://www.google.com/maps?q=28.451194,77.070867&z=17&output=embed"
               width="100%"
               height="400"
               style={{ border: 0 }}
