@@ -28,7 +28,7 @@
   <h1>Satark — Privacy Policy</h1>
   <p class="sub">
     Effective date: 28 October 2026 &nbsp;·&nbsp;
-    Last updated: 28 October 2026
+    Last updated: 2 November 2026
   </p>
 </header>
 
@@ -52,18 +52,32 @@
   <li><strong>Location:</strong> precise location about every 30 seconds while you are on duty, shown by a
       persistent notification, and once at sign-in if you have granted location access.</li>
   <li><strong>Photos, video, audio and files:</strong> what you capture or attach, and your camera and
-      microphone stream while you broadcast live or join a video meeting.</li>
+      microphone stream while you broadcast live or join a video meeting. Video meetings are
+      recorded, and the recordings are stored on our servers.</li>
+  <li><strong>Video analytics:</strong> if you turn on video analytics for a live session, the video is
+      analysed for faces, vehicle number plates, crowds and objects. Face matching processes
+      biometric data. Video analytics is off unless you choose it for that session.</li>
   <li><strong>Device:</strong> Android ID, an app installation ID, a device fingerprint (a hash of the Android
       ID and hardware details), device model, OS version, battery and network status, and push token.</li>
   <li><strong>Usage:</strong> alerts you view or acknowledge, actions you take, error logs and IP address.</li>
+  <li><strong>Automatic crash diagnostics:</strong> Google Firebase Crashlytics automatically collects
+      crash reports and technical diagnostics in production releases, including crash stack traces,
+      error categories, HTTP status codes, device model, OS/app version, crash timestamps,
+      app state, network connection type, installation identifiers and session-start timing used
+      for stability metrics. Reports may be stored on your device and uploaded
+      when the app restarts and a network connection is available.</li>
 </ul>
-<p>We collect only the information listed above, and location only while you are on duty.</p>
+<p>We collect only the information listed above. Apart from the single location reading at
+  sign-in, location is collected only while you are on duty.</p>
 
 <h2>4. How we use it</h2>
 <p>
   To sign you in and keep your session secure, provide the app's features,
-  deliver notifications, fix faults and prevent misuse. We use it only for these
-  purposes, with your consent, which you can withdraw at any time. Your
+  deliver notifications, diagnose crashes, improve app stability and prevent misuse. We use it
+  only for these purposes. Consent requirements depend on the information collected and applicable
+  privacy rules; where processing relies on your consent, you can withdraw it by contacting us
+  using the details in section 9. Crash reports are sent automatically so we can keep the app
+  working, and cannot be turned off in the app. Your
   information stays with Samsara and the service providers below; it is never
   sold or used for advertising.
   </p>
@@ -72,34 +86,49 @@
 <ul>
   <li><strong>Amazon Web Services</strong> hosts our servers.</li>
   <li><strong>Google Firebase Cloud Messaging</strong> delivers notifications (push token and notification text).</li>
-  <li><strong>Google Firebase Crashlytics</strong> receives crash and error reports (device model, OS version, app version and technical details of the fault) so we can fix problems.</li>
+  <li><strong>Google Firebase Crashlytics</strong> receives automatic crash and error diagnostics to help
+      us find and fix faults and measure app stability. We filter app-submitted error details to
+      reduce disclosure of officer details, locations, tokens and sensitive URLs, and do not set
+      an account identifier in Crashlytics. This filtering does not cover every native SDK-generated
+      report. SDK diagnostics and installation identifiers mean complete anonymity cannot be guaranteed.</li>
   <li><strong>Google</strong> connects live audio and video calls (your IP address).</li>
   <li><strong>MapTiler</strong> displays maps (your IP address and the map area you view).</li>
   <li><strong>Google Maps</strong> shows directions when you choose to open a location there.</li>
 </ul>
 <p>
-  Video meetings run on Samsara's own service. We share information with
+  Video meetings and video analytics, including face matching and number-plate
+  recognition, run on Samsara's own service. Each service provider works under a written
+  agreement that requires it to protect your information and to delete it when
+  we ask. We share information with
   authorities when Indian law, a court or a competent authority requires it.
 </p>
 
 <h2>6. Where it is stored</h2>
 <p>
   Our servers and backups are hosted by Amazon Web Services. Our service
-  providers may carry out some processing, such as face matching, number-plate
-  recognition, notifications and maps, outside India.
+  providers may carry out some processing, such as notifications, crash
+  diagnostics and maps, outside India.
 </p>
 
 <h2>7. How long we keep it</h2>
 <p>
-  We keep account records, location, media, reports and logs for 1 year from
-  their creation or last use, then erase them, together with their backups.
+  We keep account records, location, media, reports and server logs for 1 year from
+  their creation or last use, then erase them, together with their backups,
+  and instruct our service providers to delete any copies they hold.
   When your access ends or you ask us to erase your data, it leaves active use
   and is held securely, for security and legal compliance only, until that
   period ends, as Indian law requires.
 </p>
 
+<p>
+  Google Firebase Crashlytics has a separate retention schedule: crash traces and associated
+  identifiers are kept for 90 days before Google starts removing them from live and backup
+  systems. See <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.
+</p>
+
 <h2>8. How we protect it</h2>
 <p>
+  Data sent between the app and our servers is encrypted in transit.
   Credentials are kept in Android's encrypted storage and passwords as hashes on
   our servers. Access is limited by role, screenshots and screen recording are
   blocked, and app data is kept out of device cloud backups. If a security
@@ -107,7 +136,7 @@
   requires.
 </p>
 
-<h2>9. Your rights and choices</h2>
+<h2 id="delete">9. Your rights and choices</h2>
 <p>
   You can ask us to access, correct or erase your data, withdraw your consent, or
   nominate someone to act for you. To delete your account, use
@@ -119,10 +148,20 @@
 </p>
 <p>
   For any concern, contact our Grievance Officer, Abhinav Jha, at
-  <a href="mailto:info@samsara-smartworld.com">info@samsara-smartworld.com</a> or
-  <a href="tel:+918076523416">+91 80765 23416</a>. You may also approach the
-  Data Protection Board of India.
+  <a href="mailto:info@samsara-smartworld.com">info@samsara-smartworld.com</a>.
+  If you are not satisfied with our response, you may approach the Data Protection Board of India once
+  its complaints process applies; the law asks you to use our grievance process
+  first (section 13(3) of the Digital Personal Data Protection Act, 2023).
   </p>
+
+<p>
+  <strong>Crash reporting runs automatically in production releases.</strong> Satark does not offer
+  an in-app crash-report sharing switch. Android does not request a separate runtime permission
+  for crash reporting; this does not remove applicable privacy notice or consent requirements.
+  For questions or requests about diagnostic data, including withdrawal where processing relies
+  on consent, contact us using the details above. Previously uploaded reports remain subject
+  to the retention schedule in section 7.
+</p>
 
 <h2>10. Updates to this policy</h2>
 <p>
